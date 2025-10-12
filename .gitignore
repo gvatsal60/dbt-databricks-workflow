@@ -120,6 +120,10 @@ dbt_packages/
 .uv/
 uv.lock
 
+# Egg and egg-info files
+*.egg-info/
+.eggs/
+
 # Binaries, node_modules, and other folders #
 ############################################
 bin/

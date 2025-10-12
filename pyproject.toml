@@ -1,5 +1,5 @@
 [project]
-name = "dbt-test"
+name = "dbt-dbx"
 version = "0.1.0"
 description = "A streamlined dbt workflow optimized for scalable data transformations on Databricks."
 readme = "README.md"
