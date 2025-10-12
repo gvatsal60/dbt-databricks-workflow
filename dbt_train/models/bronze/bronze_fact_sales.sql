@@ -1,3 +1,2 @@
 select *
-from {{ source('source', 'fact_sales') }}
-;
+from {{ source('source', 'fact_sales') }};

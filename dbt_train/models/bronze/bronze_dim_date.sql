@@ -1,3 +1,2 @@
 select *
-from {{ source('source', 'dim_date') }}
-;
+from {{ source('source', 'dim_date') }};
