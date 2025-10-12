@@ -1,22 +1,41 @@
 {
+  "build": {
+    "dockerfile": "Dockerfile.debug"
+  },
   "capAdd": [
     "SYS_PTRACE"
   ],
   "customizations": {
     "vscode": {
       "extensions": [
-        "DavidAnson.vscode-markdownlint",
-        "EditorConfig.EditorConfig",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
-        "esbenp.prettier-vscode",
-        "foxundermoon.shell-format",
-        "ms-azuretools.vscode-docker",
+        "charliermarsh.ruff",
+        "docker.docker",
+        "innoverio.vscode-dbt-power-user",
+        "ms-azuretools.vscode-containers",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "qwtel.sqlite-viewer",
+        "redhat.vscode-yaml",
         "streetsidesoftware.code-spell-checker",
-        "timonwong.shellcheck",
         "usernamehw.errorlens"
       ],
       "settings": {
+        "cSpell.words": [
+          "ainvoke",
+          "dotenv",
+          "genai",
+          "levelname",
+          "lowlevel",
+          "PYTHONDONTWRITEBYTECODE",
+          "PYTHONIOENCODING"
+        ],
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
         "editor.detectIndentation": false,
@@ -28,7 +47,11 @@
         "explorer.confirmDelete": false,
         "extensions.ignoreRecommendations": true,
         "files.associations": {
-          "*.code-snippets": "jsonc"
+          ".env*": "dotenv",
+          ".sql": "jinja-sql"
+        },
+        "github.copilot.enable": {
+          "dotenv": false
         },
         "files.autoSave": "afterDelay",
         "files.eol": "auto",
@@ -47,10 +70,6 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/base:debian",
-  "mounts": [
-    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
-  ],
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
     "--rm",

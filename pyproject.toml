@@ -1,0 +1,16 @@
+[project]
+name = "dbt_dbx"
+version = "0.1.0"
+description = "A streamlined dbt workflow optimized for scalable data transformations on Databricks."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dbt>=1.0.0.40.7",
+    "dbt-core>=1.10.11",
+    "dbt-databricks>=1.10.12"
+]
+
+[dependency-groups]
+dev = [
+    "shandy-sqlfmt[jinjafmt]>=0.27.0",
+]

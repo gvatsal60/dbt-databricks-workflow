@@ -1,0 +1,28 @@
+FROM mcr.microsoft.com/devcontainers/base:debian AS base
+
+# Metadata indicating the maintainer of this Dockerfile
+LABEL MAINTAINER="gvatsal60"
+# Description of the purpose of this image
+LABEL DESCRIPTION="Build Environment"
+
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
+# Disabled Telemetry
+ENV ANONYMIZED_TELEMETRY=False
+# Set the `uv` link mode to copy
+ENV UV_LINK_MODE=copy
+
+# Install dependencies
+# RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+#   && apt-get update \
+#   && apt-get install -y nodejs \
+#   && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+
+# Set the default user for the container
+ARG USERNAME=vscode
+
+# Switch to non-root user
+USER ${USERNAME}
+
+# Install `uv`
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh

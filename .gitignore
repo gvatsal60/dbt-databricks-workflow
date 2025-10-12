@@ -55,6 +55,7 @@ yarn-error.log
 *.pyc
 *.pyo
 __pycache__/
+.venv/
 
 # Java
 *.class
@@ -105,6 +106,19 @@ coverage/
 
 # Next.js
 .next/
+
+# DBT artifacts
+target/
+dbt_modules/
+logs/
+dbt_packages/
+
+# Ignore user profiles
+.user.yml
+
+# UV files
+.uv/
+uv.lock
 
 # Binaries, node_modules, and other folders #
 ############################################
