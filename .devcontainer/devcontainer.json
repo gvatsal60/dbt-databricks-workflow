@@ -50,13 +50,13 @@
           ".env*": "dotenv",
           ".sql": "jinja-sql"
         },
-        "github.copilot.enable": {
-          "dotenv": false
-        },
         "files.autoSave": "afterDelay",
         "files.eol": "auto",
         "files.exclude": {
           "**/.vscode": true
+        },
+        "github.copilot.enable": {
+          "dotenv": false
         },
         "remote.downloadExtensionsLocally": false,
         "search.exclude": {
