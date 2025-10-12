@@ -82,12 +82,6 @@ This project provides a workflow for using [dbt](https://www.getdbt.com/) with [
   make test
   ```
 
-- **See all available commands:**
-
-  ```bash
-  make help
-  ```
-
 ### Running dbt Commands
 
 You can also run dbt commands directly if needed, but using `make` is recommended for consistency.
@@ -109,12 +103,6 @@ You can also run dbt commands directly if needed, but using `make` is recommende
 
   ```bash
   dbt test
-  ```
-
-- **Generate docs:**
-
-  ```bash
-  dbt docs generate
   ```
 
 ## 📚 Resources
