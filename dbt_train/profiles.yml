@@ -1,0 +1,12 @@
+dbt_train:
+  outputs:
+    dev:
+      catalog: "{{ env_var('DBT_DATABRICKS_CATALOG') }}"
+      host: "{{ env_var('DBT_DATABRICKS_HOST') }}"
+      http_path: "{{ env_var('DBT_DATABRICKS_HTTP_PATH') }}"
+      # schema: "{{ env_var('DBT_DATABRICKS_SCHEMA') }}"
+      schema: default # Replace 'default' with your desired schema name
+      threads: "{{ env_var('DBT_DATABRICKS_THREADS', 1) | int }}"
+      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
+      type: databricks
+  target: dev
