@@ -1,5 +1,4 @@
 version: 2
-
 sources:
   - name: source
     database: "{{ env_var('DBT_DATABRICKS_CATALOG') }}"
