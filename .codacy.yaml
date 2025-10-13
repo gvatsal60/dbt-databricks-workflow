@@ -1,0 +1,10 @@
+engines:
+  sqlint:
+    exclude:
+      - "**/*.jinja.sql"
+  semgrep:
+    exclude:
+      - "**/*.jinja.sql"
+    rules:
+      - id: "query-target-rac-tables"
+        enabled: false # Disable this rule
