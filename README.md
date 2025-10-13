@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/dbt-databricks-workflow)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/gvatsal60/dbt-databricks-workflow/master.svg)](https://results.pre-commit.ci/latest/github/gvatsal60/dbt-databricks-workflow/HEAD)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7ae60c7a6c824bfea751067f08618c0d)](https://app.codacy.com/gh/gvatsal60/dbt-databricks-workflow/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a200882eea5342a88bb315eb57a5a314)](https://app.codacy.com/gh/gvatsal60/dbt-databricks-workflow/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/gvatsal60/dbt-databricks-workflow/badge)](https://www.codefactor.io/repository/github/gvatsal60/dbt-databricks-workflow)
 ![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/dbt-databricks-workflow)
 ![GitHub Issues](https://img.shields.io/github/issues/gvatsal60/dbt-databricks-workflow)
