@@ -6,5 +6,5 @@ engines:
     exclude:
       - "**/*.jinja.sql"
     rules:
-      - id: "query-target-rac-tables"
+      - id: query-target-rac-tables
         enabled: false # Disable this rule
