@@ -70,7 +70,7 @@ repos:
       - id: actionlint
   # Yamlfmt for formatting YAML files
   - repo: https://github.com/google/yamlfmt
-    rev: "v0.17.2"
+    rev: "v0.19.0"
     hooks:
       - id: yamlfmt
   # Codespell for detecting common misspellings in code
@@ -85,7 +85,7 @@ repos:
       - id: checkmake
   # SQLFluff for linting and fixing SQL files
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: "3.4.2"
+    rev: "3.5.0"
     hooks:
       - id: sqlfluff-lint
         args: [--dialect=databricks]
