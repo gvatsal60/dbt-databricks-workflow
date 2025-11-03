@@ -85,7 +85,7 @@ repos:
       - id: checkmake
   # SQLFluff for linting and fixing SQL files
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: "3.5.0"
+    rev: "4.0.0a1"
     hooks:
       - id: sqlfluff-lint
         args: [--dialect=databricks]
