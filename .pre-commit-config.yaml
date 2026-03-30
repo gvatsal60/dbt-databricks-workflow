@@ -65,7 +65,7 @@ repos:
         types: [shell]
   # Actionlint for linting GitHub Actions YAML files
   - repo: https://github.com/rhysd/actionlint
-    rev: "v1.7.11"
+    rev: "v1.7.12"
     hooks:
       - id: actionlint
   # Yamlfmt for formatting YAML files
@@ -85,7 +85,7 @@ repos:
       - id: checkmake
   # SQLFluff for linting and fixing SQL files
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: "4.0.4"
+    rev: "4.1.0"
     hooks:
       - id: sqlfluff-lint
         args: [--dialect=databricks]
