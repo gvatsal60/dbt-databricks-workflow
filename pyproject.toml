@@ -12,5 +12,5 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "shandy-sqlfmt[jinjafmt]>=0.27.0",
+    "shandy-sqlfmt[jinjafmt]>=0.29.0",
 ]
