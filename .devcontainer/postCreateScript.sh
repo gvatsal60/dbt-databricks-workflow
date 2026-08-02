@@ -3,7 +3,6 @@
 ##########################################################################################
 # File: postCreateScript.sh
 # Author: Vatsal Gupta
-# Date: 12-Oct-2025
 # Description:
 
 # This script runs automatically after the DevContainer environment has been created.
