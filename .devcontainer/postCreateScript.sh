@@ -19,7 +19,6 @@
 
 # Ensure that the development environment is consistently set up with the necessary tools and settings for a smooth workflow.
 ##########################################################################################
-
 ##########################################################################################
 # License
 ##########################################################################################
@@ -50,3 +49,4 @@ curl_https() {
 # Install Linux aliases from external script using curl and execute immediately
 # Note: Make sure to review scripts fetched from external sources for security reasons
 curl_https "${ALIAS_SRC_URL}" | sh
+
