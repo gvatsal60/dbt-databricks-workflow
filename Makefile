@@ -1,49 +1,45 @@
-include .env
+# Default target
+.DEFAULT_GOAL := help
+
+help: ## Show this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
+
+-include .env
 export
 
 UV_RUN_CMD=uv run --directory $(DBT_PROJECT)
 
-.PHONY: all debug build run test clean
+.PHONY: all env env-clean env-freeze debug build run run-select test test-select clean help
 
-all: env clean build
+all: env clean build ## Set up environment and build project
 
-# Set up environment and build project
-env:
+env: ## Set up environment and sync dependencies
 	@uv sync --no-cache
 
-# Clean environment and remove .venv
-env-clean:
+env-clean: ## Clean environment and remove .venv
 	@uv clean
 	@rm -rf .venv
 
-# Freeze environment to requirements.txt
-env-freeze:
+env-freeze: ## Freeze environment to requirements.txt
 	@uv pip freeze > requirements.txt
 
-# Run dbt debug to check the setup
-debug:
+debug: ## Run dbt debug to check the setup
 	@${UV_RUN_CMD} dbt debug
 
-# Build dbt models
-build:
+build: ## Build dbt models
 	@${UV_RUN_CMD} dbt build
 
-# Run dbt models
-run:
+run: ## Run dbt models
 	@${UV_RUN_CMD} dbt run
 
-# Run selected dbt model (use MODEL=...)
-run-select:
+run-select: ## Run selected dbt model (use MODEL=...)
 	@${UV_RUN_CMD} dbt run --select "models/$(MODEL)"
 
-# Run dbt tests
-test:
+test: ## Run dbt tests
 	@${UV_RUN_CMD} dbt test
 
-# Run selected dbt test (use TEST=...)
-test-select:
+test-select: ## Run selected dbt test (use TEST=...)
 	@${UV_RUN_CMD} dbt test --select "tests/$(TEST)"
 
-# Clean dbt artifacts
-clean:
+clean: ## Clean dbt artifacts
 	@${UV_RUN_CMD} dbt clean
