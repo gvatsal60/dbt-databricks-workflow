@@ -14,10 +14,10 @@ UV_RUN_CMD=uv run --directory $(DBT_PROJECT)
 all: env clean build ## Set up environment and build project
 
 env: ## Set up environment and sync dependencies
-	@uv sync --no-cache
+	@uv sync --no-cache --quiet
 
 env-clean: ## Clean environment and remove .venv
-	@uv clean
+	@uv clean --quiet --force
 	@rm -rf .venv
 
 env-freeze: ## Freeze environment to requirements.txt
